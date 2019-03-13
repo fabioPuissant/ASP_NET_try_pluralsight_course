@@ -1,0 +1,25 @@
+﻿@using OdeToFood_home.Models
+@model OdeToFood_home.Models.Restaurant
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<h1>Create a restaurant</h1>
+
+<h2>Form met ASP-Attibuten</h2>
+    <form method="post">
+        <div>
+            <label asp-for="Name"></label>
+            <input asp-for="Name"/>
+        </div>
+
+        <div>
+            <label asp-for="Cuisine"></label>
+            <select asp-for="Cuisine" asp-items="@Html.GetEnumSelectList(typeof(CuisineType))"></select>
+        </div>
+        <input type="submit" value="Save" name="save" />
+    </form>
+
+</body>
+</html>

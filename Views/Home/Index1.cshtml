@@ -1,0 +1,22 @@
+﻿@model OdeToFood_home.ViewModels.Home.RestaurantGreeterViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>First try with viewModels</title>
+</head>
+<body>
+    <h1>@Model.Greeter.GetMessageOfTheDay()</h1>
+    <table>
+        @foreach (var restaurant in @Model.Restaurants)
+        {
+            <tr>
+                <td>ID:</td>
+                <td>@restaurant.Id</td>
+                <td>Name:</td>
+                <td>@restaurant.Name</td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

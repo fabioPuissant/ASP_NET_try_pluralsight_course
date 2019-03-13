@@ -1,0 +1,23 @@
+﻿@model IEnumerable<OdeToFood_home.Models.Restaurant>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Restaurants</title>
+</head>
+<body>
+<h1>All In memory restaurants</h1>
+<table>
+    @foreach (var restaurant in Model)
+    {
+        <tr>
+            <td>@restaurant.Id</td>
+            <td>: </td>
+            <td>@restaurant.Name</td>
+            <td>
+                <a asp-action="Details" asp-route-id="@restaurant.Id">More</a>
+            </td>
+        </tr>
+    }
+</table>
+<a asp-action="Create" >Add a restaurant</a>
+</body>
+</html>
